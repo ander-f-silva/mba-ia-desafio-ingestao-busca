@@ -37,7 +37,7 @@ def search_prompt(question: str) -> str:
 
     vectorstore = PGVector(
         collection_name=os.getenv("PG_VECTOR_COLLECTION_NAME"),
-        embedding=embeddings,
+        embeddings=embeddings,
         connection=os.getenv("DATABASE_URL"),
     )
 
